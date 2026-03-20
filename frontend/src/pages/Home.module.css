@@ -1,0 +1,150 @@
+.home { overflow-x: hidden; }
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.heroContent { flex: 1; }
+
+.heroContent h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.heroContent h1 span { color: var(--primary); }
+
+.heroContent p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 28px;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.heroBtns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.heroImg {
+  flex: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  max-width: 500px;
+}
+
+.heroImg img { width: 100%; height: 380px; object-fit: cover; }
+
+/* Steps */
+.steps {
+  background: white;
+  padding: 80px 20px;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+}
+
+.step {
+  text-align: center;
+  padding: 32px 20px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  transition: all 0.2s;
+}
+
+.step:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.stepIcon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Stats */
+.stats {
+  background: var(--primary);
+  padding: 60px 20px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.stat p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 4px;
+}
+
+/* CTA */
+.cta {
+  padding: 80px 20px;
+  text-align: center;
+  background: white;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .heroContent h1 { font-size: 2rem; }
+  .heroContent p { margin: 0 auto 24px; }
+  .heroBtns { justify-content: center; }
+  .heroImg { width: 100%; }
+}

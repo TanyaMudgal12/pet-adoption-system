@@ -1,0 +1,106 @@
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 28px;
+}
+
+.tabs button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.tabs button:hover { color: var(--primary); }
+.tabs button.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+/* Stats */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.statCard {
+  background: white;
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-top: 4px solid;
+}
+
+.statCard h3 { font-size: 1.8rem; font-weight: 800; }
+.statCard p { font-size: 0.8rem; color: var(--text-light); margin-top: 4px; }
+
+/* Applications */
+.applicationsList { display: flex; flex-direction: column; gap: 16px; }
+
+.applicationCard {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.applicationCard:hover { box-shadow: var(--shadow-hover); }
+
+.petImg {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.appInfo { flex: 1; }
+.appInfo h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+.breed { font-size: 0.8rem; color: var(--text-light); text-transform: capitalize; margin-bottom: 6px; }
+.reason { font-size: 0.82rem; color: var(--text-light); margin-bottom: 6px; line-height: 1.5; }
+.adminNote { font-size: 0.8rem; color: #e65100; background: #fff3e0; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; }
+.date { font-size: 0.75rem; color: var(--text-light); }
+
+.appRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Profile */
+.profileCard {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  max-width: 540px;
+}
+
+.profileCard h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .applicationCard { flex-direction: column; align-items: flex-start; }
+  .appRight { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+}

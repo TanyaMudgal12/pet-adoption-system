@@ -1,0 +1,63 @@
+.header { margin-bottom: 24px; }
+.subtitle { color: var(--text-light); font-size: 0.9rem; margin-top: -16px; margin-bottom: 8px; }
+
+.searchBar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.searchInput input {
+  width: 100%;
+  padding: 10px 14px 10px 36px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.2s;
+}
+
+.searchInput input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.filterToggle { position: relative; }
+.filterDot {
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  background: white;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.filters .form-group { margin-bottom: 0; }

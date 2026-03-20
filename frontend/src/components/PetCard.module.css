@@ -1,0 +1,67 @@
+.imgWrap {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .img {
+  transform: scale(1.05);
+}
+
+.statusBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.breed {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-transform: capitalize;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-transform: capitalize;
+}
+
+.desc {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.detailBtn {
+  margin-top: 4px;
+  align-self: flex-start;
+}
